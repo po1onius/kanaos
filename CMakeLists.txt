@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+project(os C)
+set(CMAKE_C_STANDARD 11)
+include_directories(src/include)
+file(GLOB SRC "src/kernel/*.c" "src/lib/*.c")
+add_executable(os ${SRC})

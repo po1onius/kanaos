@@ -1,0 +1,9 @@
+bochsout.txt
+*.img*
+*.ini
+*.bin
+*.o
+tool/
+cmake-build-debug/
+.idea/
+build/

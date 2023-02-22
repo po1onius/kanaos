@@ -1,0 +1,25 @@
+memory: guest=512, host=256
+romimage: file=$BXSHARE/BIOS-bochs-latest, options=fastboot
+vgaromimage: file=$BXSHARE/VGABIOS-lgpl-latest
+mouse: enabled=0
+pci: enabled=1, chipset=i440fx
+private_colormap: enabled=0
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="c.img", mode=flat
+ata0-slave: type=disk, path="slave.img", mode=flat
+ata1: enabled=true, ioaddr1=0x170, ioaddr2=0x370, irq=15
+ata1-master: type=none
+ata1-slave: type=none
+ata2: enabled=false
+ata3: enabled=false
+boot: disk
+log: bochsout.txt
+panic: action=ask
+error: action=report
+info: action=report
+debug: action=ignore, pci=report # report BX_DEBUG from module 'pci'
+debugger_log: -
+parport1: enabled=1, file="parport.out"
+megs:32
+display_library:x, options="gui_debug"
+magic_break: enabled=1

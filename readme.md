@@ -1,4 +1,4 @@
-## kanos
+## kanaos
 * about<br>
 一个32位单核的简易OS，类old version Linux，OS学习实践
 * dependence<br>
